@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:bullseye-slim
 LABEL maintainer="JF Mennedy <jf.mennedy@gmail.com>"
 
 ENV TERM xterm
