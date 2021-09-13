@@ -9,7 +9,7 @@ This image provides 2 different variants:
 
 You can use one of those variants by adding them to the docker image name like this:
 
-	docker pull jfmennedy/fhem-lepresenced:latest
+	docker pull jfmennedy/fhem-lepresenced-v0.93-1:latest
 
 If you do not specify any variant, `latest` will always be the default.
 
@@ -23,11 +23,11 @@ This is a multi-platform image, providing support for the following platforms:
 
 Linux:
 
-- `x86-64/AMD64` [Link](https://hub.docker.com/r/jfmennedy/fhem-lepresenced-amd64_linux/)
-- `i386` [Link](https://hub.docker.com/r/jfmennedy/fhem-lepresenced-i386_linux/)
-- `ARM32v5, armel` [Link](https://hub.docker.com/r/jfmennedy/fhem-lepresenced-arm32v5_linux/)
-- `ARM32v7, armhf` [Link](https://hub.docker.com/r/jfmennedy/fhem-lepresenced-arm32v7_linux/)
-- `ARM64v8, arm64` [Link](https://hub.docker.com/r/jfmennedy/fhem-lepresenced-arm64v8_linux/)
+- `x86-64/AMD64` [Link](https://hub.docker.com/r/jfmennedy/fhem-lepresenced-v0.93-1-amd64_linux/)
+- `i386` [Link](https://hub.docker.com/r/jfmennedy/fhem-lepresenced-v0.93-1--i386_linux/)
+- `ARM32v5, armel` [Link](https://hub.docker.com/r/jfmennedy/fhem-lepresenced-v0.93-1--arm32v5_linux/)
+- `ARM32v7, armhf` [Link](https://hub.docker.com/r/jfmennedy/fhem-lepresenced-v0.93-1--arm32v7_linux/)
+- `ARM64v8, arm64` [Link](https://hub.docker.com/r/jfmennedy/fhem-lepresenced-v0.93-1--arm64v8_linux/)
 
 
 Windows:
