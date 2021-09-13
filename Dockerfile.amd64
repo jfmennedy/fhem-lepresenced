@@ -1,5 +1,5 @@
-FROM debian:stretch-slim
-LABEL maintainer="Julian Pawlowski <julian.pawlowski@gmail.com>"
+FROM debian:bullseye
+LABEL maintainer="JF Mennedy <jf.mennedy@gmail.com>"
 
 ENV TERM xterm
 
@@ -16,8 +16,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
   netcat \
   perl \
   socat \
-  && apt-get update && apt-get upgrade \
-  && apt-get install nano \
+  nano \
+  libreadonly-perl \
   && apt-get autoremove && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -26,11 +26,11 @@ ADD https://raw.githubusercontent.com/micky0867/lebattery/master/lebattery /leba
 COPY src/entry.sh /entry.sh
 RUN chmod 755 /*.sh /lepresenced /lebattery
 
-VOLUME [ "/data" ]
+VOLUME ["/data"]
 
 EXPOSE 22
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 CMD nc -z localhost 5333
 
-ENTRYPOINT [ "/entry.sh" ]
-CMD [ "start" ]
+ENTRYPOINT ["sh","/entry.sh"]
+CMD ["start"]
